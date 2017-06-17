@@ -10,6 +10,12 @@ import Foundation
 
 struct Keys {
     
+    // cell identifiers
     static let pathCellIdentifier = "pathCell"
+    static let fearCellIdentifier = "toFears"
+    
+    // segue 
+    
+    static let toFearDetail = "toFearDetail"
     
 }

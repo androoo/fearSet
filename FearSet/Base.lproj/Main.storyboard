@@ -96,6 +96,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="pathNameLabel" destination="xFN-mZ-rrw" id="s3N-QX-i7x"/>
+                                            <segue destination="JDa-ga-w82" kind="show" identifier="toFearDetail" id="j7g-ph-xPW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -128,6 +129,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9d-ws-RvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1096.8" y="-184.85757121439281"/>
+        </scene>
+        <!--Fears View Controller-->
+        <scene sceneID="EcD-Fi-0cR">
+            <objects>
+                <viewController id="JDa-ga-w82" customClass="FearsViewController" customModule="FearSet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ElR-eQ-ZaI"/>
+                        <viewControllerLayoutGuide type="bottom" id="bjB-Oe-otT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BPQ-Eg-Ym2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GF1-PY-dJL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="Gwb-sZ-fGe">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gwb-sZ-fGe" id="cer-iQ-aHO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GF1-PY-dJL" firstAttribute="top" secondItem="ElR-eQ-ZaI" secondAttribute="bottom" id="Br3-Wr-oqQ"/>
+                            <constraint firstItem="bjB-Oe-otT" firstAttribute="top" secondItem="GF1-PY-dJL" secondAttribute="bottom" id="OXG-dL-GVI"/>
+                            <constraint firstItem="GF1-PY-dJL" firstAttribute="leading" secondItem="BPQ-Eg-Ym2" secondAttribute="leading" id="RJB-Pw-q5I"/>
+                            <constraint firstAttribute="trailing" secondItem="GF1-PY-dJL" secondAttribute="trailing" id="uB1-rt-oIw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="GF1-PY-dJL" id="olK-GS-wZL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mc-wJ-w9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988" y="-167"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H3G-bo-iLB">

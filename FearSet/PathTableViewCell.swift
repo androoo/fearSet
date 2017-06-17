@@ -23,6 +23,7 @@ class PathTableViewCell: UITableViewCell {
     func updateViews() {
         
         pathNameLabel.text = path?.name
+        
 
     }
     

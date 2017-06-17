@@ -28,6 +28,8 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setAppearance()
+        
         let fetchRequest: NSFetchRequest<Path> = Path.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: nil, cacheName: nil)
@@ -62,6 +64,8 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard let paths = fetchedResultsController.fetchedObjects else { return cell }
         
         let path = paths[indexPath.row]
+        cell.layer.cornerRadius = 4
+        cell.clipsToBounds = true 
         
         cell.path = path
         
@@ -105,6 +109,13 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    //MARK: - Helpers 
+    
+    func setAppearance() {
+        self.view.backgroundColor = UIColor.lightGray
+        self.tableView.backgroundColor = .clear 
+    }
+    
     
     //MARK: - Fetched Results Properties 
     
@@ -113,6 +124,15 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == Keys.toFearDetail,
+            let indexPath = tableView.indexPathForSelectedRow {
+            let path = PathController.shared.paths[indexPath.row]
+            let fearVC = segue.destination as? FearsViewController
+            fearVC?.path = path
+        }
+        
+        
     }
 }
 
