@@ -15,7 +15,7 @@ class PathController {
     
     static let shared = PathController()
     
-    var fears: [Path] {
+    var paths: [Path] {
         let request: NSFetchRequest<Path> = Path.fetchRequest()
         return (try? CoreDataStack.context.fetch(request)) ?? []
     }

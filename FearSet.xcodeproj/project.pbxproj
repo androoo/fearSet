@@ -17,6 +17,10 @@
 		5A7464291EF5940D00BAF86D /* Fear-Convenience .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */; };
 		5A74642B1EF597AA00BAF86D /* PathController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642A1EF597AA00BAF86D /* PathController.swift */; };
 		5A74642D1EF5998D00BAF86D /* FearController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642C1EF5998D00BAF86D /* FearController .swift */; };
+		5A74642F1EF59C6D00BAF86D /* PathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642E1EF59C6D00BAF86D /* PathViewController.swift */; };
+		5A7464311EF59D6F00BAF86D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464301EF59D6F00BAF86D /* Keys.swift */; };
+		5A7464331EF5A10300BAF86D /* PathTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464321EF5A10300BAF86D /* PathTableViewCell.swift */; };
+		5A7464351EF5A8A400BAF86D /* CreateNewPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464341EF5A8A400BAF86D /* CreateNewPathViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fear-Convenience .swift"; sourceTree = "<group>"; };
 		5A74642A1EF597AA00BAF86D /* PathController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathController.swift; sourceTree = "<group>"; };
 		5A74642C1EF5998D00BAF86D /* FearController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FearController .swift"; sourceTree = "<group>"; };
+		5A74642E1EF59C6D00BAF86D /* PathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathViewController.swift; sourceTree = "<group>"; };
+		5A7464301EF59D6F00BAF86D /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		5A7464321EF5A10300BAF86D /* PathTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathTableViewCell.swift; sourceTree = "<group>"; };
+		5A7464341EF5A8A400BAF86D /* CreateNewPathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPathViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,8 @@
 		5A7464211EF5883800BAF86D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5A74642E1EF59C6D00BAF86D /* PathViewController.swift */,
+				5A7464341EF5A8A400BAF86D /* CreateNewPathViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -124,6 +134,7 @@
 		5A7464221EF5883E00BAF86D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5A7464321EF5A10300BAF86D /* PathTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -131,6 +142,7 @@
 		5A7464231EF5885E00BAF86D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5A7464301EF59D6F00BAF86D /* Keys.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -211,10 +223,14 @@
 				5A7464251EF592E800BAF86D /* CoreDataStack.swift in Sources */,
 				5A7464101EF5841700BAF86D /* FearSet.xcdatamodeld in Sources */,
 				5A74642D1EF5998D00BAF86D /* FearController .swift in Sources */,
+				5A7464351EF5A8A400BAF86D /* CreateNewPathViewController.swift in Sources */,
 				5A7464291EF5940D00BAF86D /* Fear-Convenience .swift in Sources */,
+				5A7464331EF5A10300BAF86D /* PathTableViewCell.swift in Sources */,
 				5A7464081EF5841700BAF86D /* AppDelegate.swift in Sources */,
 				5A74642B1EF597AA00BAF86D /* PathController.swift in Sources */,
 				5A7464271EF5935A00BAF86D /* Path+Convenience .swift in Sources */,
+				5A7464311EF59D6F00BAF86D /* Keys.swift in Sources */,
+				5A74642F1EF59C6D00BAF86D /* PathViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
