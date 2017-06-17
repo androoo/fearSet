@@ -25,6 +25,7 @@ class PathController {
     
     func create(pathWithName name: String) {
         Path(name: name)
+        saveToPersistentStorage()
     }
     
     func delete(_ path: Path) {

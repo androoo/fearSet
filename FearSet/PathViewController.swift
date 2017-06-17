@@ -25,6 +25,22 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //MARK: - View Lifecycle 
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let fetchRequest: NSFetchRequest<Path> = Path.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        fetchedResultsController.delegate = self
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            NSLog("Error performing fecth request: \(error)")
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -36,14 +52,16 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - Table view data source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return PathController.shared.paths.count
+        return fetchedResultsController.fetchedObjects?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Keys.pathCellIdentifier, for: indexPath) as? PathTableViewCell else { return PathTableViewCell() }
         
-        let path = PathController.shared.paths[indexPath.row]
+        guard let paths = fetchedResultsController.fetchedObjects else { return cell }
+        
+        let path = paths[indexPath.row]
         
         cell.path = path
         
@@ -57,7 +75,58 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+    //MARK: - Fetched Results Delegates 
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+            
+        case .delete:
+            guard let indexPath = indexPath else { return }
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        case .insert:
+            guard let newIndexPath = newIndexPath else { return }
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        case .move:
+            guard let indexPath = indexPath,
+                let newIndexPath = newIndexPath else { return }
+            tableView.moveRow(at: indexPath, to: newIndexPath)
+        case .update:
+            guard let indexPath = indexPath else { return }
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    
+    //MARK: - Fetched Results Properties 
+    
+    var fetchedResultsController: NSFetchedResultsController<Path>!
+    
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
