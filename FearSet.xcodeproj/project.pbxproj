@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A7464081EF5841700BAF86D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464071EF5841700BAF86D /* AppDelegate.swift */; };
+		5A74640A1EF5841700BAF86D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464091EF5841700BAF86D /* ViewController.swift */; };
+		5A74640D1EF5841700BAF86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A74640B1EF5841700BAF86D /* Main.storyboard */; };
+		5A7464101EF5841700BAF86D /* FearSet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A74640E1EF5841700BAF86D /* FearSet.xcdatamodeld */; };
+		5A7464121EF5841700BAF86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7464111EF5841700BAF86D /* Assets.xcassets */; };
+		5A7464151EF5841700BAF86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7464131EF5841700BAF86D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5A7464041EF5841700BAF86D /* FearSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FearSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A7464071EF5841700BAF86D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A7464091EF5841700BAF86D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A74640C1EF5841700BAF86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A74640F1EF5841700BAF86D /* FearSet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FearSet.xcdatamodel; sourceTree = "<group>"; };
+		5A7464111EF5841700BAF86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A7464141EF5841700BAF86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A7464161EF5841700BAF86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A7464011EF5841700BAF86D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A7463FB1EF5841700BAF86D = {
+			isa = PBXGroup;
+			children = (
+				5A7464061EF5841700BAF86D /* FearSet */,
+				5A7464051EF5841700BAF86D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A7464051EF5841700BAF86D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A7464041EF5841700BAF86D /* FearSet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A7464061EF5841700BAF86D /* FearSet */ = {
+			isa = PBXGroup;
+			children = (
+				5A7464071EF5841700BAF86D /* AppDelegate.swift */,
+				5A7464091EF5841700BAF86D /* ViewController.swift */,
+				5A74640B1EF5841700BAF86D /* Main.storyboard */,
+				5A7464111EF5841700BAF86D /* Assets.xcassets */,
+				5A7464131EF5841700BAF86D /* LaunchScreen.storyboard */,
+				5A7464161EF5841700BAF86D /* Info.plist */,
+				5A74640E1EF5841700BAF86D /* FearSet.xcdatamodeld */,
+			);
+			path = FearSet;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A7464031EF5841700BAF86D /* FearSet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A7464191EF5841700BAF86D /* Build configuration list for PBXNativeTarget "FearSet" */;
+			buildPhases = (
+				5A7464001EF5841700BAF86D /* Sources */,
+				5A7464011EF5841700BAF86D /* Frameworks */,
+				5A7464021EF5841700BAF86D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FearSet;
+			productName = FearSet;
+			productReference = 5A7464041EF5841700BAF86D /* FearSet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A7463FC1EF5841700BAF86D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = And;
+				TargetAttributes = {
+					5A7464031EF5841700BAF86D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BP324SX4AT;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5A7463FF1EF5841700BAF86D /* Build configuration list for PBXProject "FearSet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A7463FB1EF5841700BAF86D;
+			productRefGroup = 5A7464051EF5841700BAF86D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A7464031EF5841700BAF86D /* FearSet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A7464021EF5841700BAF86D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A7464151EF5841700BAF86D /* LaunchScreen.storyboard in Resources */,
+				5A7464121EF5841700BAF86D /* Assets.xcassets in Resources */,
+				5A74640D1EF5841700BAF86D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A7464001EF5841700BAF86D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A7464101EF5841700BAF86D /* FearSet.xcdatamodeld in Sources */,
+				5A74640A1EF5841700BAF86D /* ViewController.swift in Sources */,
+				5A7464081EF5841700BAF86D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5A74640B1EF5841700BAF86D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A74640C1EF5841700BAF86D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A7464131EF5841700BAF86D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A7464141EF5841700BAF86D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A7464171EF5841700BAF86D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A7464181EF5841700BAF86D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A74641A1EF5841700BAF86D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BP324SX4AT;
+				INFOPLIST_FILE = FearSet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = studio.and.FearSet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5A74641B1EF5841700BAF86D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BP324SX4AT;
+				INFOPLIST_FILE = FearSet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = studio.and.FearSet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A7463FF1EF5841700BAF86D /* Build configuration list for PBXProject "FearSet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A7464171EF5841700BAF86D /* Debug */,
+				5A7464181EF5841700BAF86D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A7464191EF5841700BAF86D /* Build configuration list for PBXNativeTarget "FearSet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A74641A1EF5841700BAF86D /* Debug */,
+				5A74641B1EF5841700BAF86D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5A74640E1EF5841700BAF86D /* FearSet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5A74640F1EF5841700BAF86D /* FearSet.xcdatamodel */,
+			);
+			currentVersion = 5A74640F1EF5841700BAF86D /* FearSet.xcdatamodel */;
+			path = FearSet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5A7463FC1EF5841700BAF86D /* Project object */;
+}
