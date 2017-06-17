@@ -15,6 +15,8 @@
 		5A7464251EF592E800BAF86D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464241EF592E800BAF86D /* CoreDataStack.swift */; };
 		5A7464271EF5935A00BAF86D /* Path+Convenience .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464261EF5935A00BAF86D /* Path+Convenience .swift */; };
 		5A7464291EF5940D00BAF86D /* Fear-Convenience .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */; };
+		5A74642B1EF597AA00BAF86D /* PathController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642A1EF597AA00BAF86D /* PathController.swift */; };
+		5A74642D1EF5998D00BAF86D /* FearController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642C1EF5998D00BAF86D /* FearController .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		5A7464241EF592E800BAF86D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5A7464261EF5935A00BAF86D /* Path+Convenience .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Path+Convenience .swift"; sourceTree = "<group>"; };
 		5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fear-Convenience .swift"; sourceTree = "<group>"; };
+		5A74642A1EF597AA00BAF86D /* PathController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathController.swift; sourceTree = "<group>"; };
+		5A74642C1EF5998D00BAF86D /* FearController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FearController .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 		5A7464201EF5883100BAF86D /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5A74642A1EF597AA00BAF86D /* PathController.swift */,
+				5A74642C1EF5998D00BAF86D /* FearController .swift */,
 			);
 			name = ModelControllers;
 			sourceTree = "<group>";
@@ -204,8 +210,10 @@
 			files = (
 				5A7464251EF592E800BAF86D /* CoreDataStack.swift in Sources */,
 				5A7464101EF5841700BAF86D /* FearSet.xcdatamodeld in Sources */,
+				5A74642D1EF5998D00BAF86D /* FearController .swift in Sources */,
 				5A7464291EF5940D00BAF86D /* Fear-Convenience .swift in Sources */,
 				5A7464081EF5841700BAF86D /* AppDelegate.swift in Sources */,
+				5A74642B1EF597AA00BAF86D /* PathController.swift in Sources */,
 				5A7464271EF5935A00BAF86D /* Path+Convenience .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
