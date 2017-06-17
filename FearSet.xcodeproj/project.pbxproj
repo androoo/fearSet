@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		5A7464081EF5841700BAF86D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464071EF5841700BAF86D /* AppDelegate.swift */; };
-		5A74640A1EF5841700BAF86D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464091EF5841700BAF86D /* ViewController.swift */; };
 		5A74640D1EF5841700BAF86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A74640B1EF5841700BAF86D /* Main.storyboard */; };
 		5A7464101EF5841700BAF86D /* FearSet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A74640E1EF5841700BAF86D /* FearSet.xcdatamodeld */; };
 		5A7464121EF5841700BAF86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7464111EF5841700BAF86D /* Assets.xcassets */; };
 		5A7464151EF5841700BAF86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7464131EF5841700BAF86D /* LaunchScreen.storyboard */; };
+		5A7464251EF592E800BAF86D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464241EF592E800BAF86D /* CoreDataStack.swift */; };
+		5A7464271EF5935A00BAF86D /* Path+Convenience .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464261EF5935A00BAF86D /* Path+Convenience .swift */; };
+		5A7464291EF5940D00BAF86D /* Fear-Convenience .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A7464041EF5841700BAF86D /* FearSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FearSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7464071EF5841700BAF86D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A7464091EF5841700BAF86D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A74640C1EF5841700BAF86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A74640F1EF5841700BAF86D /* FearSet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FearSet.xcdatamodel; sourceTree = "<group>"; };
 		5A7464111EF5841700BAF86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A7464141EF5841700BAF86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A7464161EF5841700BAF86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A7464241EF592E800BAF86D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		5A7464261EF5935A00BAF86D /* Path+Convenience .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Path+Convenience .swift"; sourceTree = "<group>"; };
+		5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fear-Convenience .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,73 @@
 		5A7464061EF5841700BAF86D /* FearSet */ = {
 			isa = PBXGroup;
 			children = (
-				5A7464071EF5841700BAF86D /* AppDelegate.swift */,
-				5A7464091EF5841700BAF86D /* ViewController.swift */,
-				5A74640B1EF5841700BAF86D /* Main.storyboard */,
-				5A7464111EF5841700BAF86D /* Assets.xcassets */,
-				5A7464131EF5841700BAF86D /* LaunchScreen.storyboard */,
-				5A7464161EF5841700BAF86D /* Info.plist */,
-				5A74640E1EF5841700BAF86D /* FearSet.xcdatamodeld */,
+				5A74641F1EF5882300BAF86D /* Models */,
+				5A7464201EF5883100BAF86D /* ModelControllers */,
+				5A7464211EF5883800BAF86D /* ViewControllers */,
+				5A7464221EF5883E00BAF86D /* Views */,
+				5A74641C1EF587BF00BAF86D /* Storyboards */,
+				5A7464231EF5885E00BAF86D /* Helpers */,
+				5A74641E1EF5881C00BAF86D /* Resources */,
 			);
 			path = FearSet;
+			sourceTree = "<group>";
+		};
+		5A74641C1EF587BF00BAF86D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5A74640B1EF5841700BAF86D /* Main.storyboard */,
+				5A7464131EF5841700BAF86D /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		5A74641E1EF5881C00BAF86D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A7464071EF5841700BAF86D /* AppDelegate.swift */,
+				5A7464111EF5841700BAF86D /* Assets.xcassets */,
+				5A7464161EF5841700BAF86D /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5A74641F1EF5882300BAF86D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A74640E1EF5841700BAF86D /* FearSet.xcdatamodeld */,
+				5A7464241EF592E800BAF86D /* CoreDataStack.swift */,
+				5A7464261EF5935A00BAF86D /* Path+Convenience .swift */,
+				5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5A7464201EF5883100BAF86D /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModelControllers;
+			sourceTree = "<group>";
+		};
+		5A7464211EF5883800BAF86D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5A7464221EF5883E00BAF86D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5A7464231EF5885E00BAF86D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +202,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7464251EF592E800BAF86D /* CoreDataStack.swift in Sources */,
 				5A7464101EF5841700BAF86D /* FearSet.xcdatamodeld in Sources */,
-				5A74640A1EF5841700BAF86D /* ViewController.swift in Sources */,
+				5A7464291EF5940D00BAF86D /* Fear-Convenience .swift in Sources */,
 				5A7464081EF5841700BAF86D /* AppDelegate.swift in Sources */,
+				5A7464271EF5935A00BAF86D /* Path+Convenience .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
