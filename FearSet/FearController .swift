@@ -11,8 +11,8 @@ import CoreData
 
 class FearController {
     
-    static func create(FearWithName name: String, shouldDo: Bool, value: Int) {
-        let _ = Fear(name: name, shouldDo: shouldDo, value: value)
+    static func create(FearWithName name: String, shouldDo: Bool, value: Int, path: Path) {
+        let _ = Fear(name: name, shouldDo: shouldDo, value: value, path: path)
         PathController.shared.saveToPersistentStorage()
     }
     

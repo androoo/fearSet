@@ -14,12 +14,11 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
     //MARK: - Properties 
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerView: UIView!
     
+    @IBOutlet weak var addDecisionButtonView: UIView!
     
     //MARK: - UI Actions 
-    
-    @IBAction func addPathButtonTapped(_ sender: Any) {
-    }
     
     
     
@@ -29,6 +28,8 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         setAppearance()
+        
+        self.view.backgroundColor = Colors.gray
         
         let fetchRequest: NSFetchRequest<Path> = Path.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
@@ -65,7 +66,6 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let path = paths[indexPath.row]
         
-        
         cell.path = path
         
         return cell
@@ -73,7 +73,11 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            if let decision = fetchedResultsController.fetchedObjects?[indexPath.row] {
+                PathController.shared.delete(decision)
+            }
+            
         }
     }
     
@@ -115,14 +119,26 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
     //MARK: - Helpers 
     
     func setAppearance() {
+        
+//        navigationController?.isNavigationBarHidden = true 
+        
+        headerView.backgroundColor = Colors.orange
+        
         self.view.backgroundColor = .white
         self.tableView.backgroundColor = .clear
         
-        navigationController?.navigationBar.barTintColor = Colors.orange
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
         
         self.tableView.separatorStyle = .none
         
         navigationController?.navigationBar.tintColor = .white
+        
+        self.addDecisionButtonView.layer.cornerRadius = 8
+        self.addDecisionButtonView.clipsToBounds = true
+        
     }
     
     

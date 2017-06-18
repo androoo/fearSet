@@ -14,21 +14,45 @@ class CreateNewPathViewController: UIViewController {
     
     @IBOutlet weak var enterNameTextField: UITextField!
     
+    @IBOutlet weak var mainViewBg: UIView!
     
     //MARK: - UI Actions 
     
     @IBAction func createPathButtonTapped(_ sender: Any) {
-        guard let pathName = enterNameTextField.text,
-            !pathName.isEmpty else { return }
         
-        PathController.shared.create(pathWithName: pathName)
-        enterNameTextField.text = ""
+        
+        
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
     
+    
     //MARK: - View Lifecycle 
+
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let height: CGFloat = 45
+        
+        
+        view.backgroundColor = Colors.blue4
+        
+        mainViewBg.layer.cornerRadius = 8
+        mainViewBg.clipsToBounds = true
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        
+        let bounds = self.navigationController!.navigationBar.bounds
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
+        
+        
+    }
 
 }

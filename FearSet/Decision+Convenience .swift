@@ -1,5 +1,5 @@
 //
-//  Path+Convenience .swift
+//  Decision+Convenience .swift
 //  FearSet
 //
 //  Created by Andrew Ervin Gierke on 6/17/17.
@@ -9,9 +9,9 @@
 import Foundation
 import CoreData
 
-extension Path {
+extension Decision {
     
-    @discardableResult convenience init(name: String, context: NSManagedObjectContext = CoreDataStack.context) {
+    @discardableResult convenience init(name: String, answer: Bool = false, context: NSManagedObjectContext = CoreDataStack.context) {
         
         self.init(context: context)
         self.name = name 
