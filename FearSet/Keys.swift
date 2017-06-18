@@ -12,7 +12,7 @@ struct Keys {
     
     // cell identifiers
     static let pathCellIdentifier = "pathCell"
-    static let fearCellIdentifier = "toFears"
+    static let fearCellIdentifier = "fearCell"
     
     // segue 
     

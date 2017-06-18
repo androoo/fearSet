@@ -64,8 +64,7 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard let paths = fetchedResultsController.fetchedObjects else { return cell }
         
         let path = paths[indexPath.row]
-        cell.layer.cornerRadius = 4
-        cell.clipsToBounds = true 
+        
         
         cell.path = path
         
@@ -76,6 +75,10 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
         if editingStyle == .delete {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
     
     
@@ -112,8 +115,14 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
     //MARK: - Helpers 
     
     func setAppearance() {
-        self.view.backgroundColor = UIColor.lightGray
-        self.tableView.backgroundColor = .clear 
+        self.view.backgroundColor = .white
+        self.tableView.backgroundColor = .clear
+        
+        navigationController?.navigationBar.barTintColor = Colors.orange
+        
+        self.tableView.separatorStyle = .none
+        
+        navigationController?.navigationBar.tintColor = .white
     }
     
     

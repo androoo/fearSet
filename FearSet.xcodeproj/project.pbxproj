@@ -22,6 +22,8 @@
 		5A7464331EF5A10300BAF86D /* PathTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464321EF5A10300BAF86D /* PathTableViewCell.swift */; };
 		5A7464351EF5A8A400BAF86D /* CreateNewPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464341EF5A8A400BAF86D /* CreateNewPathViewController.swift */; };
 		5A7464371EF5BB2800BAF86D /* FearsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464361EF5BB2800BAF86D /* FearsViewController.swift */; };
+		5A7464391EF5D97800BAF86D /* FearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464381EF5D97800BAF86D /* FearTableViewCell.swift */; };
+		5A74643B1EF5FD7A00BAF86D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74643A1EF5FD7A00BAF86D /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		5A7464321EF5A10300BAF86D /* PathTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathTableViewCell.swift; sourceTree = "<group>"; };
 		5A7464341EF5A8A400BAF86D /* CreateNewPathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPathViewController.swift; sourceTree = "<group>"; };
 		5A7464361EF5BB2800BAF86D /* FearsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FearsViewController.swift; sourceTree = "<group>"; };
+		5A7464381EF5D97800BAF86D /* FearTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FearTableViewCell.swift; sourceTree = "<group>"; };
+		5A74643A1EF5FD7A00BAF86D /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				5A7464321EF5A10300BAF86D /* PathTableViewCell.swift */,
+				5A7464381EF5D97800BAF86D /* FearTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				5A7464301EF59D6F00BAF86D /* Keys.swift */,
+				5A74643A1EF5FD7A00BAF86D /* Colors.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -226,10 +232,12 @@
 				5A7464251EF592E800BAF86D /* CoreDataStack.swift in Sources */,
 				5A7464101EF5841700BAF86D /* FearSet.xcdatamodeld in Sources */,
 				5A74642D1EF5998D00BAF86D /* FearController .swift in Sources */,
+				5A74643B1EF5FD7A00BAF86D /* Colors.swift in Sources */,
 				5A7464351EF5A8A400BAF86D /* CreateNewPathViewController.swift in Sources */,
 				5A7464371EF5BB2800BAF86D /* FearsViewController.swift in Sources */,
 				5A7464291EF5940D00BAF86D /* Fear-Convenience .swift in Sources */,
 				5A7464331EF5A10300BAF86D /* PathTableViewCell.swift in Sources */,
+				5A7464391EF5D97800BAF86D /* FearTableViewCell.swift in Sources */,
 				5A7464081EF5841700BAF86D /* AppDelegate.swift in Sources */,
 				5A74642B1EF597AA00BAF86D /* PathController.swift in Sources */,
 				5A7464271EF5935A00BAF86D /* Path+Convenience .swift in Sources */,

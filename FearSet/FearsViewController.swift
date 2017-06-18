@@ -13,6 +13,8 @@ class FearsViewController: UIViewController, NSFetchedResultsControllerDelegate 
     
     //MARK: - Properties 
     
+    @IBOutlet weak var addFearTextField: UITextField!
+    
     var fetchedResultsController: NSFetchedResultsController<Fear>!
     
     var path: Path? {
