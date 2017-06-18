@@ -17,5 +17,7 @@ struct Keys {
     // segue 
     
     static let toFearDetail = "toFearDetail"
+    static let toAddFears = "toAddNewFears"
+    static let toAddSolutions = "toAddSolutions"
     
 }

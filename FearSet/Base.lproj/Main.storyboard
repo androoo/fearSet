@@ -80,11 +80,12 @@
                         <barButtonItem key="rightBarButtonItem" title="Next" id="SZG-Qg-jRK">
                             <connections>
                                 <action selector="createPathButtonTapped:" destination="rr4-sA-2ns" id="RdP-CO-Lal"/>
-                                <segue destination="gtX-oZ-SLW" kind="show" id="AcV-NT-bUN"/>
+                                <segue destination="gtX-oZ-SLW" kind="show" identifier="toAddNewFears" id="AcV-NT-bUN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="decisionSlider" destination="k5w-RO-ffJ" id="oUN-s0-EYE"/>
                         <outlet property="enterNameTextField" destination="y7Y-xL-1Au" id="iJr-2k-gN4"/>
                         <outlet property="mainViewBg" destination="WRj-sd-Q0P" id="FCt-T6-4dx"/>
                     </connections>
@@ -172,13 +173,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="khu-eI-qZ6">
                             <connections>
-                                <action selector="nextButtonTapped:" destination="gtX-oZ-SLW" id="T9c-9B-MH2"/>
-                                <segue destination="s5S-SL-Rx1" kind="show" id="mD0-MS-ODc"/>
+                                <segue destination="s5S-SL-Rx1" kind="show" identifier="toAddSolutions" id="mD0-MS-ODc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="decisionTitleLabel" destination="OaY-QJ-nQR" id="O7J-B0-6Iw"/>
+                        <outlet property="fearValueSlider" destination="M3d-6I-aaa" id="e1K-0g-uzL"/>
                         <outlet property="mainCardViewBg" destination="BuD-nv-akV" id="4kO-bV-NR5"/>
                         <outlet property="reasonTextField" destination="vLw-BK-Mgt" id="Epv-FN-W15"/>
                     </connections>
@@ -272,7 +273,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mainViewBg" destination="fpS-Hl-df5" id="N43-1o-ON9"/>
+                        <outlet property="sliderHeadingLabel" destination="Xbl-fU-J6B" id="hs0-lJ-9Ii"/>
                         <outlet property="solutionTextField" destination="eba-9l-di3" id="yO0-kg-eyg"/>
+                        <outlet property="subHeadingLabel" destination="y6t-tn-gME" id="fSC-EP-xub"/>
                         <outlet property="titleLabel" destination="gTL-d2-Kol" id="NJy-DZ-tGO"/>
                     </connections>
                 </viewController>
@@ -280,10 +283,10 @@
             </objects>
             <point key="canvasLocation" x="3623" y="-899"/>
         </scene>
-        <!--Path View Controller-->
+        <!--Decision View Controller-->
         <scene sceneID="U1e-3E-5ke">
             <objects>
-                <viewController id="hGO-cx-zpZ" customClass="PathViewController" customModule="FearSet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hGO-cx-zpZ" customClass="DecisionViewController" customModule="FearSet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CFD-1w-GSc"/>
                         <viewControllerLayoutGuide type="bottom" id="9kE-c7-xwP"/>

@@ -11,11 +11,10 @@ import CoreData
 
 extension Solution {
     
-    @discardableResult convenience init(text: String, value: Int, fear: Fear, context: NSManagedObjectContext = CoreDataStack.context) {
+    @discardableResult convenience init(text: String, value: Int = 0, fear: Fear, context: NSManagedObjectContext = CoreDataStack.context) {
         
         self.init(context: context)
         self.text = text
-        self.value = value
         self.fear = fear
         
     }

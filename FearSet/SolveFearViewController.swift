@@ -10,18 +10,23 @@ import UIKit
 
 class SolveFearViewController: UIViewController {
     
+    //MARK: - Properties 
+    
+    var decisionName: String?
+    var decisionValue: Float?
+    var fearName: String?
+    var fearValue: Float?
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mainViewBg: UIView!
     @IBOutlet weak var solutionTextField: UITextField!
+    
+    @IBOutlet weak var subHeadingLabel: UILabel!
+    @IBOutlet weak var sliderHeadingLabel: UILabel!
+    
 
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        
-        guard let pathName = enterNameTextField.text,
-            !pathName.isEmpty else { return }
-        
-        PathController.shared.create(pathWithName: pathName)
-        enterNameTextField.text = ""
         
     }
     
@@ -33,6 +38,23 @@ class SolveFearViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        titleLabel.text = fearName
+        titleLabel.textColor = Colors.aquaGreen
+        
+        subHeadingLabel.textColor = Colors.blue3
+        sliderHeadingLabel.textColor = Colors.blue3
+        
+        self.title = "\(decisionName)"
+        
     }
+    
 
 }
+
+
+
+
+
+
+
+

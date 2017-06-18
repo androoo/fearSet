@@ -15,9 +15,9 @@
 		5A7464251EF592E800BAF86D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464241EF592E800BAF86D /* CoreDataStack.swift */; };
 		5A7464271EF5935A00BAF86D /* Decision+Convenience .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464261EF5935A00BAF86D /* Decision+Convenience .swift */; };
 		5A7464291EF5940D00BAF86D /* Fear-Convenience .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */; };
-		5A74642B1EF597AA00BAF86D /* PathController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642A1EF597AA00BAF86D /* PathController.swift */; };
+		5A74642B1EF597AA00BAF86D /* DecisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642A1EF597AA00BAF86D /* DecisionController.swift */; };
 		5A74642D1EF5998D00BAF86D /* FearController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642C1EF5998D00BAF86D /* FearController .swift */; };
-		5A74642F1EF59C6D00BAF86D /* PathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642E1EF59C6D00BAF86D /* PathViewController.swift */; };
+		5A74642F1EF59C6D00BAF86D /* DecisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642E1EF59C6D00BAF86D /* DecisionViewController.swift */; };
 		5A7464311EF59D6F00BAF86D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464301EF59D6F00BAF86D /* Keys.swift */; };
 		5A7464331EF5A10300BAF86D /* PathTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464321EF5A10300BAF86D /* PathTableViewCell.swift */; };
 		5A7464351EF5A8A400BAF86D /* CreateNewPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464341EF5A8A400BAF86D /* CreateNewPathViewController.swift */; };
@@ -27,6 +27,7 @@
 		5A74643E1EF6CB2D00BAF86D /* AddFearsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74643D1EF6CB2D00BAF86D /* AddFearsViewController.swift */; };
 		5A7464401EF6D77900BAF86D /* SolveFearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74643F1EF6D77900BAF86D /* SolveFearViewController.swift */; };
 		5A7464421EF709CF00BAF86D /* Solution+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464411EF709CF00BAF86D /* Solution+Convenience.swift */; };
+		5A7464441EF7103400BAF86D /* SolutionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464431EF7103400BAF86D /* SolutionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +41,9 @@
 		5A7464241EF592E800BAF86D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5A7464261EF5935A00BAF86D /* Decision+Convenience .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decision+Convenience .swift"; sourceTree = "<group>"; };
 		5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fear-Convenience .swift"; sourceTree = "<group>"; };
-		5A74642A1EF597AA00BAF86D /* PathController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathController.swift; sourceTree = "<group>"; };
+		5A74642A1EF597AA00BAF86D /* DecisionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionController.swift; sourceTree = "<group>"; };
 		5A74642C1EF5998D00BAF86D /* FearController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FearController .swift"; sourceTree = "<group>"; };
-		5A74642E1EF59C6D00BAF86D /* PathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathViewController.swift; sourceTree = "<group>"; };
+		5A74642E1EF59C6D00BAF86D /* DecisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionViewController.swift; sourceTree = "<group>"; };
 		5A7464301EF59D6F00BAF86D /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		5A7464321EF5A10300BAF86D /* PathTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathTableViewCell.swift; sourceTree = "<group>"; };
 		5A7464341EF5A8A400BAF86D /* CreateNewPathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPathViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		5A74643D1EF6CB2D00BAF86D /* AddFearsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFearsViewController.swift; sourceTree = "<group>"; };
 		5A74643F1EF6D77900BAF86D /* SolveFearViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolveFearViewController.swift; sourceTree = "<group>"; };
 		5A7464411EF709CF00BAF86D /* Solution+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solution+Convenience.swift"; sourceTree = "<group>"; };
+		5A7464431EF7103400BAF86D /* SolutionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +132,9 @@
 		5A7464201EF5883100BAF86D /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5A74642A1EF597AA00BAF86D /* PathController.swift */,
+				5A74642A1EF597AA00BAF86D /* DecisionController.swift */,
 				5A74642C1EF5998D00BAF86D /* FearController .swift */,
+				5A7464431EF7103400BAF86D /* SolutionController.swift */,
 			);
 			name = ModelControllers;
 			sourceTree = "<group>";
@@ -139,7 +142,7 @@
 		5A7464211EF5883800BAF86D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5A74642E1EF59C6D00BAF86D /* PathViewController.swift */,
+				5A74642E1EF59C6D00BAF86D /* DecisionViewController.swift */,
 				5A7464361EF5BB2800BAF86D /* FearsViewController.swift */,
 			);
 			name = ViewControllers;
@@ -258,11 +261,12 @@
 				5A7464331EF5A10300BAF86D /* PathTableViewCell.swift in Sources */,
 				5A7464391EF5D97800BAF86D /* FearTableViewCell.swift in Sources */,
 				5A7464081EF5841700BAF86D /* AppDelegate.swift in Sources */,
-				5A74642B1EF597AA00BAF86D /* PathController.swift in Sources */,
+				5A74642B1EF597AA00BAF86D /* DecisionController.swift in Sources */,
 				5A7464271EF5935A00BAF86D /* Decision+Convenience .swift in Sources */,
 				5A7464311EF59D6F00BAF86D /* Keys.swift in Sources */,
 				5A7464401EF6D77900BAF86D /* SolveFearViewController.swift in Sources */,
-				5A74642F1EF59C6D00BAF86D /* PathViewController.swift in Sources */,
+				5A7464441EF7103400BAF86D /* SolutionController.swift in Sources */,
+				5A74642F1EF59C6D00BAF86D /* DecisionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

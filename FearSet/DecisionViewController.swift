@@ -1,5 +1,5 @@
 //
-//  PathViewController.swift
+//  DecisionViewController.swift
 //  FearSet
 //
 //  Created by Andrew Ervin Gierke on 6/17/17.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class PathViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
+class DecisionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     
     //MARK: - Properties 
     
@@ -31,7 +31,7 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.view.backgroundColor = Colors.gray
         
-        let fetchRequest: NSFetchRequest<Path> = Path.fetchRequest()
+        let fetchRequest: NSFetchRequest<Decision> = Decision.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -62,11 +62,11 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Keys.pathCellIdentifier, for: indexPath) as? PathTableViewCell else { return PathTableViewCell() }
         
-        guard let paths = fetchedResultsController.fetchedObjects else { return cell }
+        guard let decisions = fetchedResultsController.fetchedObjects else { return cell }
         
-        let path = paths[indexPath.row]
+        let decision = decisions[indexPath.row]
         
-        cell.path = path
+        cell.decision = decision
         
         return cell
     }
@@ -75,7 +75,7 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
         if editingStyle == .delete {
             
             if let decision = fetchedResultsController.fetchedObjects?[indexPath.row] {
-                PathController.shared.delete(decision)
+                DecisionController.shared.delete(decision)
             }
             
         }
@@ -144,7 +144,7 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //MARK: - Fetched Results Properties 
     
-    var fetchedResultsController: NSFetchedResultsController<Path>!
+    var fetchedResultsController: NSFetchedResultsController<Decision>!
     
     
     // MARK: - Navigation
@@ -152,9 +152,9 @@ class PathViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if segue.identifier == Keys.toFearDetail,
             let indexPath = tableView.indexPathForSelectedRow {
-            let path = PathController.shared.paths[indexPath.row]
+            let decision = DecisionController.shared.decisions[indexPath.row]
             let fearVC = segue.destination as? FearsViewController
-            fearVC?.path = path
+            fearVC?.decision = decision
         }
         
         

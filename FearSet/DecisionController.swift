@@ -1,5 +1,5 @@
 //
-//  PathController.swift
+//  DecisionController.swift
 //  FearSet
 //
 //  Created by Andrew Ervin Gierke on 6/17/17.
@@ -9,28 +9,28 @@
 import Foundation
 import CoreData
 
-class PathController {
+class DecisionController {
     
     //MARK: - Properties
     
-    static let shared = PathController()
+    static let shared = DecisionController()
     
-    var paths: [Path] {
-        let request: NSFetchRequest<Path> = Path.fetchRequest()
+    var decisions: [Decision] {
+        let request: NSFetchRequest<Decision> = Decision.fetchRequest()
         return (try? CoreDataStack.context.fetch(request)) ?? []
     }
     
     
     //MARK: - CRUD 
     
-    func create(pathWithName name: String) {
-        Path(name: name)
+    func create(DecisionWithName name: String) {
+        Decision(name: name)
         saveToPersistentStorage()
     }
     
-    func delete(_ path: Path) {
-        if let moc = path.managedObjectContext {
-            moc.delete(path)
+    func delete(_ decision: Decision) {
+        if let moc = decision.managedObjectContext {
+            moc.delete(decision)
             saveToPersistentStorage()
         }
     }

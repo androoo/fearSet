@@ -11,15 +11,15 @@ import CoreData
 
 class FearController {
     
-    static func create(FearWithName name: String, shouldDo: Bool, value: Int, path: Path) {
-        let _ = Fear(name: name, shouldDo: shouldDo, value: value, path: path)
-        PathController.shared.saveToPersistentStorage()
+    static func create(FearWithName name: String, value: Int = 0, decision: Decision) {
+        let _ = Fear(name: name, decision: decision)
+        DecisionController.shared.saveToPersistentStorage()
     }
     
     static func delete(fear: Fear) {
         if let moc = fear.managedObjectContext {
             moc.delete(fear)
-            PathController.shared.saveToPersistentStorage()
+            DecisionController.shared.saveToPersistentStorage()
         }
     }
 }

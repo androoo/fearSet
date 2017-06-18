@@ -14,7 +14,7 @@ class PathTableViewCell: UITableViewCell {
     
     @IBOutlet weak var pathNameLabel: UILabel!
     
-    var path: Path? {
+    var decision: Decision? {
         didSet{
             updateViews()
         }
@@ -22,7 +22,7 @@ class PathTableViewCell: UITableViewCell {
     
     func updateViews() {
         
-        pathNameLabel.text = path?.name
+        pathNameLabel.text = decision?.name
 
     }
     

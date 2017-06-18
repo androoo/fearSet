@@ -17,7 +17,7 @@ class FearsViewController: UIViewController, NSFetchedResultsControllerDelegate 
     
     var fetchedResultsController: NSFetchedResultsController<Fear>!
     
-    var path: Path? {
+    var decision: Decision? {
         didSet {
             configureFetchedResultsController()
         }
@@ -33,7 +33,7 @@ class FearsViewController: UIViewController, NSFetchedResultsControllerDelegate 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return path?.fears?.count ?? 0
+        return decision?.fears?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,7 +54,7 @@ class FearsViewController: UIViewController, NSFetchedResultsControllerDelegate 
     
     private func configureFetchedResultsController() {
         
-        guard let path = path else { return }
+        guard let decision = decision else { return }
         
         if fetchedResultsController == nil {
             
@@ -67,7 +67,7 @@ class FearsViewController: UIViewController, NSFetchedResultsControllerDelegate 
         
         let fetchRequest: NSFetchRequest<Fear> = Fear.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        fetchRequest.predicate = NSPredicate(format: "path == %@", path)
+        fetchRequest.predicate = NSPredicate(format: "path == %@", decision)
             
             do {
                 try fetchedResultsController.performFetch()
