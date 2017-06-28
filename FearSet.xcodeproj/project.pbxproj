@@ -14,7 +14,7 @@
 		5A7464151EF5841700BAF86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7464131EF5841700BAF86D /* LaunchScreen.storyboard */; };
 		5A7464251EF592E800BAF86D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464241EF592E800BAF86D /* CoreDataStack.swift */; };
 		5A7464271EF5935A00BAF86D /* Decision+Convenience .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464261EF5935A00BAF86D /* Decision+Convenience .swift */; };
-		5A7464291EF5940D00BAF86D /* Fear-Convenience .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */; };
+		5A7464291EF5940D00BAF86D /* Fear+Convenience .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464281EF5940D00BAF86D /* Fear+Convenience .swift */; };
 		5A74642B1EF597AA00BAF86D /* DecisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642A1EF597AA00BAF86D /* DecisionController.swift */; };
 		5A74642D1EF5998D00BAF86D /* FearController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642C1EF5998D00BAF86D /* FearController .swift */; };
 		5A74642F1EF59C6D00BAF86D /* DecisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74642E1EF59C6D00BAF86D /* DecisionViewController.swift */; };
@@ -28,6 +28,7 @@
 		5A7464401EF6D77900BAF86D /* SolveFearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74643F1EF6D77900BAF86D /* SolveFearViewController.swift */; };
 		5A7464421EF709CF00BAF86D /* Solution+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464411EF709CF00BAF86D /* Solution+Convenience.swift */; };
 		5A7464441EF7103400BAF86D /* SolutionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7464431EF7103400BAF86D /* SolutionController.swift */; };
+		5A7467331F03151200BAF86D /* SolutionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7467321F03151200BAF86D /* SolutionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,7 @@
 		5A7464161EF5841700BAF86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A7464241EF592E800BAF86D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5A7464261EF5935A00BAF86D /* Decision+Convenience .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decision+Convenience .swift"; sourceTree = "<group>"; };
-		5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fear-Convenience .swift"; sourceTree = "<group>"; };
+		5A7464281EF5940D00BAF86D /* Fear+Convenience .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fear+Convenience .swift"; sourceTree = "<group>"; };
 		5A74642A1EF597AA00BAF86D /* DecisionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionController.swift; sourceTree = "<group>"; };
 		5A74642C1EF5998D00BAF86D /* FearController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FearController .swift"; sourceTree = "<group>"; };
 		5A74642E1EF59C6D00BAF86D /* DecisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		5A74643F1EF6D77900BAF86D /* SolveFearViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolveFearViewController.swift; sourceTree = "<group>"; };
 		5A7464411EF709CF00BAF86D /* Solution+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solution+Convenience.swift"; sourceTree = "<group>"; };
 		5A7464431EF7103400BAF86D /* SolutionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionController.swift; sourceTree = "<group>"; };
+		5A7467321F03151200BAF86D /* SolutionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +125,7 @@
 				5A74640E1EF5841700BAF86D /* FearSet.xcdatamodeld */,
 				5A7464241EF592E800BAF86D /* CoreDataStack.swift */,
 				5A7464261EF5935A00BAF86D /* Decision+Convenience .swift */,
-				5A7464281EF5940D00BAF86D /* Fear-Convenience .swift */,
+				5A7464281EF5940D00BAF86D /* Fear+Convenience .swift */,
 				5A7464411EF709CF00BAF86D /* Solution+Convenience.swift */,
 			);
 			name = Models;
@@ -144,6 +146,7 @@
 			children = (
 				5A74642E1EF59C6D00BAF86D /* DecisionViewController.swift */,
 				5A7464361EF5BB2800BAF86D /* FearsViewController.swift */,
+				5A7467321F03151200BAF86D /* SolutionsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -256,7 +259,8 @@
 				5A74643B1EF5FD7A00BAF86D /* Colors.swift in Sources */,
 				5A7464351EF5A8A400BAF86D /* CreateNewPathViewController.swift in Sources */,
 				5A7464371EF5BB2800BAF86D /* FearsViewController.swift in Sources */,
-				5A7464291EF5940D00BAF86D /* Fear-Convenience .swift in Sources */,
+				5A7467331F03151200BAF86D /* SolutionsViewController.swift in Sources */,
+				5A7464291EF5940D00BAF86D /* Fear+Convenience .swift in Sources */,
 				5A74643E1EF6CB2D00BAF86D /* AddFearsViewController.swift in Sources */,
 				5A7464331EF5A10300BAF86D /* PathTableViewCell.swift in Sources */,
 				5A7464391EF5D97800BAF86D /* FearTableViewCell.swift in Sources */,
@@ -430,6 +434,7 @@
 				5A74641B1EF5841700BAF86D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

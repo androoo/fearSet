@@ -23,9 +23,10 @@ class DecisionController {
     
     //MARK: - CRUD 
     
-    func create(DecisionWithName name: String) {
-        Decision(name: name)
+    func create(DecisionWithName name: String) -> Decision {
+        let decision = Decision(name: name)
         saveToPersistentStorage()
+        return decision
     }
     
     func delete(_ decision: Decision) {

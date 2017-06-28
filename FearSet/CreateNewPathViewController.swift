@@ -31,12 +31,6 @@ class CreateNewPathViewController: UIViewController {
         
         let height: CGFloat = 45
         
-        
-        view.backgroundColor = Colors.blue4
-        
-        mainViewBg.layer.cornerRadius = 8
-        mainViewBg.clipsToBounds = true
-        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -49,12 +43,14 @@ class CreateNewPathViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Keys.toAddFears {
-            guard let decision = enterNameTextField.text,
-                !decision.isEmpty else { return }
+            guard let decisionText = enterNameTextField.text,
+                !decisionText.isEmpty else { return }
             
             let addFearVC = segue.destination as? AddFearsViewController
             
-            addFearVC?.decisionName = decision
+            let decision = DecisionController.shared.create(DecisionWithName: decisionText)
+            
+            addFearVC?.decision = decision
             addFearVC?.decisionValue = decisionSlider.value
             
         }

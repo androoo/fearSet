@@ -16,7 +16,6 @@ class DecisionViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerView: UIView!
     
-    @IBOutlet weak var addDecisionButtonView: UIView!
     
     //MARK: - UI Actions 
     
@@ -77,7 +76,6 @@ class DecisionViewController: UIViewController, UITableViewDelegate, UITableView
             if let decision = fetchedResultsController.fetchedObjects?[indexPath.row] {
                 DecisionController.shared.delete(decision)
             }
-            
         }
     }
     
@@ -136,9 +134,6 @@ class DecisionViewController: UIViewController, UITableViewDelegate, UITableView
         
         navigationController?.navigationBar.tintColor = .white
         
-        self.addDecisionButtonView.layer.cornerRadius = 8
-        self.addDecisionButtonView.clipsToBounds = true
-        
     }
     
     
@@ -152,12 +147,13 @@ class DecisionViewController: UIViewController, UITableViewDelegate, UITableView
         
         if segue.identifier == Keys.toFearDetail,
             let indexPath = tableView.indexPathForSelectedRow {
+            
             let decision = DecisionController.shared.decisions[indexPath.row]
+            
             let fearVC = segue.destination as? FearsViewController
+            
             fearVC?.decision = decision
         }
-        
-        
     }
 }
 

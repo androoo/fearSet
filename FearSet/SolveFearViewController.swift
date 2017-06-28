@@ -17,6 +17,8 @@ class SolveFearViewController: UIViewController {
     var fearName: String?
     var fearValue: Float?
     
+    var fear: Fear?
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mainViewBg: UIView!
     @IBOutlet weak var solutionTextField: UITextField!
@@ -27,7 +29,12 @@ class SolveFearViewController: UIViewController {
 
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        
+        guard let solution = solutionTextField.text,
+            let fear = fear else {
+                return
+        }
+        SolutionController.shared.create(solutionWith: solution, value: 5.0, fear: fear)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -38,17 +45,19 @@ class SolveFearViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        titleLabel.text = fear?.name
+        
+        
+        
         titleLabel.text = fearName
         titleLabel.textColor = Colors.aquaGreen
         
         subHeadingLabel.textColor = Colors.blue3
         sliderHeadingLabel.textColor = Colors.blue3
         
-        self.title = "\(decisionName)"
+        self.title = "\(fear?.name)"
         
     }
-    
-
 }
 
 

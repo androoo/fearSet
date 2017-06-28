@@ -11,12 +11,14 @@ import CoreData
 
 class SolutionController {
     
-    static func create(solutionWith text: String, value: Int = 0, fear: Fear) {
-        let _ = Solution(text: text, fear: fear)
+    static let shared = SolutionController()
+    
+    func create(solutionWith text: String, value: Float = 0, fear: Fear) {
+        let _ = Solution(text: text, value: value, fear: fear)
         DecisionController.shared.saveToPersistentStorage()
     }
     
-    static func delete(solution: Solution) {
+    func delete(solution: Solution) {
         if let moc = solution.managedObjectContext {
             moc.delete(solution)
             DecisionController.shared.saveToPersistentStorage()

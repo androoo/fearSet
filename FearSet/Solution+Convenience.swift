@@ -11,7 +11,7 @@ import CoreData
 
 extension Solution {
     
-    @discardableResult convenience init(text: String, value: Int = 0, fear: Fear, context: NSManagedObjectContext = CoreDataStack.context) {
+    convenience init(text: String, value: Float = 0, fear: Fear, context: NSManagedObjectContext = CoreDataStack.context) {
         
         self.init(context: context)
         self.text = text

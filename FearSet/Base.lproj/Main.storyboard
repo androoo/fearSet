@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cuj-sq-hdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1988" y="-899.10044977511257"/>
+            <point key="canvasLocation" x="1940" y="-899"/>
         </scene>
         <!--Title-->
         <scene sceneID="Rji-1T-T4t">
@@ -332,26 +332,6 @@
                                     <outlet property="delegate" destination="hGO-cx-zpZ" id="rJI-Dr-apn"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJp-hZ-7es">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Um-51-Yhk">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                        <state key="normal" title="Add Decision"/>
-                                        <connections>
-                                            <segue destination="H9j-GV-23j" kind="presentation" id="Uma-3B-feb"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="9Um-51-Yhk" firstAttribute="leading" secondItem="AJp-hZ-7es" secondAttribute="leading" id="4gc-0g-5js"/>
-                                    <constraint firstAttribute="height" constant="64" id="A69-sI-5eT"/>
-                                    <constraint firstAttribute="trailing" secondItem="9Um-51-Yhk" secondAttribute="trailing" id="UDm-Kh-FxT"/>
-                                    <constraint firstAttribute="bottom" secondItem="9Um-51-Yhk" secondAttribute="bottom" id="fjf-2w-aHM"/>
-                                    <constraint firstItem="9Um-51-Yhk" firstAttribute="top" secondItem="AJp-hZ-7es" secondAttribute="top" id="vCn-Ws-SMb"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwp-Pm-uF6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                 <color key="backgroundColor" red="0.43921568630000002" green="0.015686274510000001" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -362,21 +342,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="AJp-hZ-7es" secondAttribute="trailing" id="3Vm-pT-2MV"/>
-                            <constraint firstItem="AJp-hZ-7es" firstAttribute="leading" secondItem="17d-bQ-RXZ" secondAttribute="leading" id="7MA-s7-LDc"/>
                             <constraint firstItem="pwp-Pm-uF6" firstAttribute="leading" secondItem="17d-bQ-RXZ" secondAttribute="leading" id="IQE-2u-hgl"/>
                             <constraint firstItem="i1s-MW-lz8" firstAttribute="leading" secondItem="17d-bQ-RXZ" secondAttribute="leading" id="P4L-Zf-7xz"/>
                             <constraint firstItem="i1s-MW-lz8" firstAttribute="top" secondItem="CFD-1w-GSc" secondAttribute="bottom" constant="22" id="Tav-oy-SpK"/>
                             <constraint firstItem="9kE-c7-xwP" firstAttribute="top" secondItem="i1s-MW-lz8" secondAttribute="bottom" id="XiN-fN-Xtm"/>
-                            <constraint firstItem="9kE-c7-xwP" firstAttribute="top" secondItem="AJp-hZ-7es" secondAttribute="bottom" id="bSs-Ev-K8c"/>
                             <constraint firstAttribute="trailing" secondItem="i1s-MW-lz8" secondAttribute="trailing" id="d3E-61-vEy"/>
                             <constraint firstItem="pwp-Pm-uF6" firstAttribute="top" secondItem="CFD-1w-GSc" secondAttribute="bottom" constant="-64" id="k4G-BH-lSW"/>
                             <constraint firstAttribute="trailing" secondItem="pwp-Pm-uF6" secondAttribute="trailing" id="mhe-os-HDB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tls-nD-1oP"/>
+                    <navigationItem key="navigationItem" id="tls-nD-1oP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="R8v-vZ-Ve8">
+                            <connections>
+                                <segue destination="H9j-GV-23j" kind="presentation" id="wEW-e1-WXg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="addDecisionButtonView" destination="AJp-hZ-7es" id="2vS-eg-cr2"/>
                         <outlet property="headerView" destination="pwp-Pm-uF6" id="uf0-Tf-yE8"/>
                         <outlet property="tableView" destination="i1s-MW-lz8" id="RO1-3M-zCm"/>
                     </connections>
@@ -444,6 +426,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JDa-ga-w82" id="udp-E2-c0e"/>
+                                    <outlet property="delegate" destination="JDa-ga-w82" id="WpM-m8-UP3"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -461,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mc-wJ-w9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1988" y="-167"/>
+            <point key="canvasLocation" x="1940" y="-186"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H3G-bo-iLB">
@@ -479,7 +465,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMj-Wa-wtk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157.59999999999999" y="-184.85757121439281"/>
+            <point key="canvasLocation" x="278" y="-185"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yoz-mj-1ti">

@@ -11,7 +11,7 @@ import CoreData
 
 extension Decision {
     
-    @discardableResult convenience init(name: String, answer: Bool = false, context: NSManagedObjectContext = CoreDataStack.context) {
+    convenience init(name: String, answer: Bool = false, context: NSManagedObjectContext = CoreDataStack.context) {
         
         self.init(context: context)
         self.name = name 

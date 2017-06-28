@@ -19,9 +19,10 @@ class AddFearsViewController: UIViewController, NSFetchedResultsControllerDelega
     
     @IBOutlet weak var fearValueSlider: UISlider!
     
-    
     var decisionName: String?
     var decisionValue: Float?
+    
+    var decision: Decision?
     
     //MARK: - UI Action s
     
@@ -32,12 +33,8 @@ class AddFearsViewController: UIViewController, NSFetchedResultsControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Colors.blue3
-        mainCardViewBg.backgroundColor = .white
-        mainCardViewBg.layer.cornerRadius = 6
-        mainCardViewBg.clipsToBounds = true
         
-        decisionTitleLabel.text = decisionName
+        decisionTitleLabel.text = decision?.name
         decisionTitleLabel.textColor = Colors.redOrange
         
         // clear navbar
@@ -48,20 +45,21 @@ class AddFearsViewController: UIViewController, NSFetchedResultsControllerDelega
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == Keys.toAddSolutions {
             
-            guard let decision = decisionName,
-                !decision.isEmpty,
-                let decisionValue = decisionValue,
+            guard let decision = self.decision,
                 let fearText = reasonTextField.text,
-                !fearText.isEmpty else { return }
+                !fearText.isEmpty else {
+                    return
+            }
             
             let addSolutionVC = segue.destination as? SolveFearViewController
             
-            addSolutionVC?.decisionName = decision
-            addSolutionVC?.decisionValue = decisionValue
-            addSolutionVC?.fearName = fearText
-            addSolutionVC?.fearValue = fearValueSlider.value
+            let fear = FearController.shared.create(FearWithName: fearText, value: fearValueSlider.value, decision: decision)
+            
+            addSolutionVC?.fear = fear 
+            
             
         }
     }

@@ -11,7 +11,7 @@ import CoreData
 
 extension Fear {
     
-    @discardableResult convenience init(name: String, value: Int = 0, decision: Decision, context: NSManagedObjectContext = CoreDataStack.context) {
+    convenience init(name: String, value: Float = 0, decision: Decision, context: NSManagedObjectContext = CoreDataStack.context) {
         
         self.init(context: context)
         self.name = name
